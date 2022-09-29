@@ -1,0 +1,81 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  font-family: sans-serif;
+  background-color: rgb(31, 31, 31);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+main button {
+  background-color: rgb(108, 206, 81);
+  border: none;
+  width: 80%;
+  margin: 0 auto;
+  padding: 10px;
+  margin-top: 5%;
+  color: #fff;
+  font-size: 25px;
+  border-radius: 10px;
+}
+
+main button:hover {
+  cursor: pointer;
+  background-color: rgb(56, 164, 26);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(11, 1fr);
+  padding: 5px 10px;
+}
+
+/* NORMALE STOELEN */
+.grid > .stoel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: transparent;
+  background-image: url("../img/stoel.png");
+  margin-top: 0.5vh;
+  border-radius: 5px;
+  user-select: none;
+  width: 50px;
+  height: 40px;
+  cursor: pointer;
+}
+
+/* .vrij {
+  background-image: url("../img/stoel.png");
+} */
+
+/* .bezet {
+  background-image: url("../img/bezet.png");
+} */
+
+.bezet {
+  opacity: 0.5;
+}
+
+.geselecteerd {
+  filter: contrast(200%);
+}
+
+/* GEHANDICAPTESTOELEN */
+.stoel:nth-child(100),
+.stoel:nth-child(101) {
+  background-image: url("../img/stoel2.png");
+}
